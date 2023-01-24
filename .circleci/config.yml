@@ -23,6 +23,7 @@ jobs:
       - restore_cache:
           keys: 
             - "node-packages"
+      - run: npm i
       - run: npm run test 
 
   analyze:
@@ -32,6 +33,7 @@ jobs:
       - restore_cache:
           keys: 
             - "node-packages"
+      - run: npm i
       - run: npm audit 
   
 workflows:
